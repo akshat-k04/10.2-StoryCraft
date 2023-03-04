@@ -52,7 +52,7 @@ async function sendotp(req, res) {
         secure: false, // true for 465, false for other ports
         auth: {
             user: "storycraft.tech@gmail.com", // generated ethereal user
-            pass: "uthpubnlrdibiqus", // generated ethereal password
+            pass: "wfhfaqothacvzzqv", // generated ethereal password
         },
     });
 
