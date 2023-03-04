@@ -43,7 +43,7 @@ async function getdatta(req, res) {
 async function UserExistence(req, res, next) {
     let num = req.body.email;
     let data = await authmdl.findOne({ email: num });
-    console.log(num) ;
+    console.log(req.body) ;
 
     if (data) {
         //console.log('if login');
