@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 //import files
 const authRouter = require('./src/routes/authRoute');
 const otprouter = require('./src/routes/otpRoute.js');
-
+const mdrouter = require('./src/routes/MarkdownRoute.js');
 
 
 const bodyParser = require('body-parser');
@@ -20,7 +20,7 @@ app.listen(port, () => { console.log('server is listening at port 3000') });
 
 app.use("/auth", authRouter);
 app.use("/otp", otprouter);
-
+app.use("/md",mdrouter );
 
 
 
