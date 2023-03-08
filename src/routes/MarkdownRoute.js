@@ -35,18 +35,18 @@ async function addMD(req, res) {
 }
 
 async function deleteMD(req, res) {
-    let id = req.body.id;
+    let localid = req.body.localid;
     let email = req.body.email ;
-    await MDModel.findOneAndDelete({ _id: id,email:email });
+    await MDModel.findOneAndDelete({ localid: localid,email:email });
     console.log("deleted");
     res.json({"bol":"deleted"});
 }
 
 async function updateMD(req, res) {
-    let data = req.body.id;
+    let data = req.body.localid;
     let modified = req.body;
     let email = req.body.email;
-    let not = await MDModel.findOneAndUpdate({ _id: data,email:email }, modified);
+    let not = await MDModel.findOneAndUpdate({ localid: data,email:email }, modified);
     console.log("updated");
     res.json({ "bol": "update" });
 }
