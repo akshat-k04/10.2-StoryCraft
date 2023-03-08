@@ -13,7 +13,9 @@ const mdmodel = mongoose.Schema({
         required: true,
         
     },
-   
+    localid:{
+        type:String
+    },
     date: {
         type: String,
         required: true,
