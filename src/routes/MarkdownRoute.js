@@ -23,7 +23,9 @@ mdRouter.post("/update", updateMD);
 async function getMD(req, res) {
     let mailID = req.body.email;
     let nots = await MDModel.find({ email: mailID });
+    console.log("requested for"+mailID) ;
     res.json({"bol":nots});
+    console.log("data sent");
 }
 
 async function addMD(req, res) {
