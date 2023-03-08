@@ -38,6 +38,7 @@ async function deleteMD(req, res) {
     let id = req.body.id;
     let email = req.body.email ;
     await MDModel.findOneAndDelete({ _id: id,email:email });
+    console.log("deleted");
     res.json({"bol":"deleted"});
 }
 
@@ -46,6 +47,7 @@ async function updateMD(req, res) {
     let modified = req.body;
     let email = req.body.email;
     let not = await MDModel.findOneAndUpdate({ _id: data,email:email }, modified);
+    console.log("updated");
     res.json({ "bol": "update" });
 }
 
