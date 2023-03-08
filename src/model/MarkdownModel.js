@@ -13,10 +13,7 @@ const mdmodel = mongoose.Schema({
         required: true,
         
     },
-    id:{
-        type: String ,
-        required:true 
-    },
+   
     date: {
         type: String,
         required: true,
