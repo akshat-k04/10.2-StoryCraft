@@ -16,7 +16,15 @@ mdRouter.post("/delete", deleteMD);
 // to update the md
 mdRouter.post("/update", updateMD);
 
+mdRouter.post("find", FindSpecific) ;
 
+
+async function FindSpecific(req, res) {
+    let localid = req.body.localid;
+    let nots = await MDModel.findOne({ localid:localid });
+    res.json({ "bol": nots });
+    console.log("data sent");
+}
 
 
 
