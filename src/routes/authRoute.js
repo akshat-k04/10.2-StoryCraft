@@ -29,7 +29,11 @@ async function getdatta(req, res) {
     let email = req.body.email;
     let data = await authmdl.findOne({ email: email });
     if (data) {
-        res.json(data);
+
+        res.json({
+            'name':data.name ,
+            'email':data.email
+        });
 
     }
     else {
