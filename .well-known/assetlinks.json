@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.example.storycraft",
+            "sha256_cert_fingerprints": [
+                "15:A3:46:D1:4A:03:60:6D:7E:A2:AA:00:97:7B:29:B1:D6:16:38:A5:55:33:22:E5:0C:09:C3:05:36:50:C2:EB"
+            ]
+        }
+    }
+]
