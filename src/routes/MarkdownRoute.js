@@ -16,7 +16,7 @@ mdRouter.post("/delete", deleteMD);
 // to update the md
 mdRouter.post("/update", updateMD);
 
-mdRouter.post("find", FindSpecific) ;
+mdRouter.post("/find", FindSpecific) ;
 
 
 async function FindSpecific(req, res) {
