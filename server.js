@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const authRouter = require('./src/routes/authRoute');
 const otprouter = require('./src/routes/otpRoute.js');
 const mdrouter = require('./src/routes/MarkdownRoute.js');
-
+const drawrouter = require('./src/routes/drawingroute.js');
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,10 +21,10 @@ app.listen(port, () => { console.log('server is listening at port 3000') });
 app.use("/auth", authRouter);
 app.use("/otp", otprouter);
 app.use("/md",mdrouter );
+app.use("/draw",drawrouter);
 
 
-
-const link = 'mongodb+srv://akshat_k:ilovechemicalengineering@cluster0.6ugwfe3.mongodb.net/?retryWrites=true&w=majority';
+const link = 'mongodb+srv://storycrafttech:iloveiitroorkee@storycraft.4n3ph6o.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(link)
     .then(function () {
         console.log('db connected');
@@ -33,5 +33,4 @@ mongoose.connect(link)
     .catch(function (err) {
         console.log(err);
     });
-
 
